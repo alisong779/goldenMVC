@@ -5,10 +5,14 @@
     }
 
     public function index(){
-      $this->view('hello');
+      $data = [
+        'title' => 'Welcome'
+      ];
+
+      $this->view('pages/index', $data);
     }
 
-    public function about($id){
-      echo $id;
+    public function about(){
+      $this->view('pages/about');
     }
   }
